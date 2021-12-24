@@ -206,7 +206,9 @@ function _buildS3Client(s3ClientOpts) {
     region: s3ClientOpts.region,
     accessKeyId: s3ClientOpts.key,
     secretAccessKey: s3ClientOpts.secret,
-    endpoint: s3ClientOpts.endpoint
+    endpoint: s3ClientOpts.endpoint,
+    s3ForcePathStyle: s3ClientOpts.s3ForcePathStyle,
+    sslEnabled: s3ClientOpts.sslEnabled
   });
   return new AWS.S3(s3ConstructorArgins);
 }//ƒ
